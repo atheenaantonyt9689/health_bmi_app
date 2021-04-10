@@ -1,0 +1,111 @@
+
+  {% extends 'layouts/base.html' %}
+
+  {% block content %}
+  
+            
+          <div class="col-12 col-sm-6 col-md-6 ">
+            <div class="card text-center">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" >METRIC UNIT</a>
+                  </li>
+                  
+                </ul>
+              </div>
+              <div class="card-body">
+                <form  method="post"class="form-signin">
+                  {% csrf_token %}
+      
+      <h2 class="h3 mb-3 font-weight-normal" >Metric Unit</h1>
+      <label for="quantity" >HEIGHT</label>
+     
+      <input type="quantity" name="height" class="form-control" placeholder="cms" required autofocus>
+      <br>
+      <label for="quantity" >WEIGHT</label>
+     
+      <input type="quantity" name="weight" class="form-control" placeholder="kgs" required autofocus>
+      <br>
+      
+      <div>
+        <br>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-6 ">
+               
+                <button class="btn btn-success btn-lg " type="submit" formaction="calculator/calculator.html">Calculate </button>
+               
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 ">
+            
+                <button class="btn btn-secondary btn-lg" type="" formaction="calculator.html">clear </button>
+              
+            </div>
+          </div>
+        </div>
+  
+        
+      
+      </div>
+          </form>
+     
+              </div>
+            </div>
+
+               
+                  </div>
+
+                  <div class="col-12 col-sm-6 col-md-6 m-t:8">
+                    <div class="card" style="width: 80%;height: 400px;;">
+                      
+                      <div class="card-header">{{bmi.bmi}}
+                        
+                      </div>
+                      <ul >
+                        <li></li>
+                        <li></li>
+
+
+                      </ul>
+                        
+                    </div>
+                    
+
+                  </div>
+               
+    <!--form class="form-signin">
+      
+      <h2 class="h3 mb-3 font-weight-normal" >Metric Unit</h1>
+      <label for="quantity" >HEIGHT</label>
+     
+      <input type="quantity" name="height"id="" class="form-control" placeholder="cms" required autofocus>
+      <br>
+      <label for="quantity" >WEIGHT</label>
+      <input type="quantity" name="weight" id="" class="form-control" placeholder="kg" required>
+      <div>
+        <br>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-6 ">
+               
+                <button class="btn btn-success btn-lg " type="submit" formaction="calculator.html">Calculate </button>
+               
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 ">
+            
+                <button class="btn btn-secondary btn-lg" type="submit" formaction="calculator.html">clear </button>
+              
+            </div>
+          </div>
+        </div>
+  
+        
+      
+      </div>
+          </form>
+          </div-->
+  
+          
+    {% endblock content %}
+  
