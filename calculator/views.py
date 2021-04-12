@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from django.views.generic import TemplateView
 #from bmi.py import BmiCalculator
 from .bmi import BmiCalculator
@@ -7,11 +8,11 @@ class HomePageView(TemplateView):
     template_name = 'calculator/calculator.html'
 class BmiView(View):
     def get(self,request,*args,**kwargs):
-        print("request.get",request.get)
         return render(request,"calculator/calculator.html",{})
     def post(self,request,*args,**kwargs):
-        print(args)
-        print(request.POST)
+        print("lllllllllll",args)
+        print("kkkkkk:",**kwargs)
+        print("kkkkkkkkkllmmmmm",request.POST)
         weight=request.POST.get("weight")
         height=request.POST.get("height")
         calc=BmiCalculator()
